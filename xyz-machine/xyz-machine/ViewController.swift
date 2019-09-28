@@ -20,17 +20,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print("test")
-        zLabel.text = "Stage 0"
-      //  motionManager = CMMotionManager()
-      //  motionManager.startAccelerometerUpdates(to: .main, withHandler: updateLabels)
+        motionManager = CMMotionManager()
+        motionManager.startAccelerometerUpdates(to: .main, withHandler: updateLabels)
         }
     
 
     func updateLabels(data: CMAccelerometerData?, error: Error?) {
-        xLabel.text = "Stage 1"
         guard let  accelerometerData = data else { return }
-        yLabel.text = "Stage 2"
         
         let formatter = NumberFormatter()
         formatter.minimumFractionDigits = 1
