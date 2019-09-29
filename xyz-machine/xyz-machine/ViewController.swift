@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         
         let formatter = NumberFormatter()
         formatter.minimumFractionDigits = 1
-        formatter.maximumFractionDigits = 1
+        formatter.maximumFractionDigits = 2
         
         let x = formatter.string(for: accelerometerData.acceleration.x)!
         let y = formatter.string(for: accelerometerData.acceleration.y)!
